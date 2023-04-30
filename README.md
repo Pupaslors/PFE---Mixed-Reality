@@ -1,3 +1,5 @@
+Code de base pour le nuage de points : https://github.com/izmhr/KinectV2DepthPoints
+
 On lance l'application directement depuis l'éditeur unity, mais il faut au préalable:
 - Brancher le Kinect V2 à l'ordinateur, vérifier qu'il est bien détecté. Installer le SDK Kinect et lancer l'application Kinect studio si nécessaire.
 - Brancher le casque VIVE à l'ordinateur, vérifier qu'il est bien détecté.
