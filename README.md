@@ -1,50 +1,12 @@
-## これは
+On lance l'application directement depuis l'éditeur unity, mais il faut au préalable:
+- Brancher le Kinect V2 à l'ordinateur, vérifier qu'il est bien détecté. Installer le SDK Kinect et lancer l'application Kinect studio si nécessaire.
+- Brancher le casque VIVE à l'ordinateur, vérifier qu'il est bien détecté.
+- Allumer le casque.
 
-Unity で Kinect V2 の Depth 画像を、点群として見るソフトです
+On peut ensuite lancer l'application depuis l'éditeur unity, puis vérifier que l'application s'est bien lancée dans le casque.
 
-![image](http://cdn-ak.f.st-hatena.com/images/fotolife/A/AMANE/20171227/20171227222450_original.png)
+Il faut ensuite faire un calibrage (ou il vaut mieux être deux). On déplace manuellement la caméra dans la scene au niveau dans la tête de l'utilisateur (il faut que l'application soit lancée, donc en mode play), il faut que l'utilisateur ai l'impression de regarder depuis la position de ses yeux comme naturellement. 
 
-* [Kinect v2 Point Cloud on Unity 2017.3 - YouTube](https://www.youtube.com/watch?v=19P8f213UU8)
+On peut ensuite faire différents tests dans cet environnement calibré. 
 
-Unity 2017.3 から、Mesh が 32bit index buffer をサポートしました。 [(リリースノート)](https://unity3d.com/jp/unity/beta/unity2017.3.0b10) これにより、65536頂点以上の頂点を持つ Mesh オブジェクトを扱えるようになっています。
-
-### できること
-
-- Kinect v2 のデプス画像 (512x424 pixels, 8000階調[16bit]) を、間引くことなくポイントクラウド風に表示する
-
-### できないこと
-
-- KinectSDK をつかった CameraSpace への展開をしていません。「それっぽい」展開を独自実装しています
-- カラー画像とのマッピングが出来る設計になっていません。
-
-### リファレンス
-
-先に keijiro さんがこの機能を利用して、PCLのデータをインポートするエディタ拡張を作られていて、これが出来るなら Kinect V2 のデプスデータも似たような感じで扱えるのでは、と思って、参考にしながら作ってみました。
-
-- [keijiro/Pcx](https://github.com/keijiro/Pcx)
-
-## 実行
-
-### 環境
-
-- Windows 10 x64
-- Unity 2017.3.0f3 (2017/12/23現在)
-- Visual Studio Community 2017 (これは依存してないと思う)
-- KinectSDK-v2.0_1409
-
-### 必要なアセット
-
-- [Kinect for Windows SDK 2.0 Unity Pro Add-in](http://go.microsoft.com/fwlink/?LinkID=513177)
-  - 公式の配布ページがわからないけど直リンク。
-
-### 手順
-
-- あらかじめ KinectSDK を入れて、標準のビューワでデータが見られることを確認しておく
-- 本リポジトリをDLして、Unityで開く
-- Kinect for Windows SDK 2.0 Unity Pro Add-in の .unitypackage を展開する
-- Main.unity シーンを開く
-- 実行する
-
-### 調整
-
-- `KinectDepthBasic` マテリアル (`KinectDepthBasic` シェーダ) の `Displacement` の値を調整することで、デプスの奥方向への広げ方を調整出来ます。
+Il faut cependant refaire le calibrage si on change d'utilisateur, notemment en fonction de sa taille.
