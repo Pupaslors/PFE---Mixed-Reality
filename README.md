@@ -5,7 +5,7 @@ On lance l'application directement depuis l'éditeur unity, mais il faut au pré
 
 On peut ensuite lancer l'application depuis l'éditeur unity, puis vérifier que l'application s'est bien lancée dans le casque.
 
-Il faut ensuite faire un calibrage (où il vaut mieux être deux). On déplace manuellement la caméra dans la scene au niveau dans la tête de l'utilisateur (il faut que l'application soit lancée, donc en mode play), il faut que l'utilisateur ai l'impression de regarder depuis la position de ses yeux comme naturellement. 
+Il faut ensuite faire un calibrage (où il vaut mieux être deux). On déplace manuellement la caméra dans la scene au niveau dans la tête de l'utilisateur (il faut que l'application soit lancée, donc en mode play), il faut que l'utilisateur ait l'impression de regarder depuis la position de ses yeux comme naturellement. 
 
 On peut ensuite faire différents tests dans cet environnement calibré. 
 
